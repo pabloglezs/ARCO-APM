@@ -52,6 +52,16 @@ void MainWindow::on_boton1_clicked()
     bandera++;
 }
 
+void MainWindow::on_boton1_2_clicked()
+{
+    if(bandera2 == 6){
+        bandera2 = 0;
+    }
+
+    algorithm2();
+    bandera2++;
+}
+
 double MainWindow::abrir(){
 
 
@@ -121,9 +131,84 @@ void MainWindow:: algorithm1(){
     }
 
 
+}
 
+void MainWindow:: algorithm2(){
+
+    double result = cargarImagen();
+    QString resultString = QString:: number(result);
+    if(bandera2==0){
+        ui->exec2_1->clear();
+        ui->exec2_1->append(QString::fromStdString("Execution 1: "));
+        ui->exec2_1->append(resultString);
+    }
+
+    if(bandera2==1){
+        ui->exec2_2->append(resultString);
+    }
+
+    if(bandera2==2){
+        ui->exec2_3->append(resultString);
+    }
+
+    if(bandera2==3){
+        ui->exec2_4->append(resultString);
+    }
+
+    if(bandera2==4){
+        ui->exec2_5->append(resultString);
+    }
+
+    if(bandera2==5){
+        ui->exec2_6->append(resultString);
+    }
+
+}
+
+double MainWindow::cargarImagen(){
+
+
+
+        QImage imagen;
+        QRgb colores;
+        int rojo, azul, verde;
+      QString archivo = QFileDialog::getOpenFileName(
+               this,
+               tr("Open Document"),
+               QDir::currentPath(),
+               tr("Document files (*.jpg);;All files (*.*)") );
+
+       QPixmap pixMap(archivo);
+       imagen=pixMap.toImage();
+       clock_t tiempo=clock();
+
+
+
+       for (int i = 0; i < pixMap.width(); i++) {
+           for (int j = 0; j < pixMap.height(); j++) {
+                colores=imagen.pixel(i,j);
+                rojo=250-qRed(colores);
+                azul=250-qBlue(colores);
+                verde=250- qGreen(colores);
+                QPoint p(i,j);
+
+                imagen.setPixel(p, qRgb(rojo,azul, verde));
+           }
+       }
+
+       pixMap=pixMap.fromImage(imagen);
+
+       QLabel *l= new QLabel();
+       l->setPixmap(pixMap);
+       l->show();
+
+       tiempo = clock() - tiempo; //fin crono
+
+
+       return (double)(tiempo)/CLOCKS_PER_SEC;
 
 
 }
+
 
 
