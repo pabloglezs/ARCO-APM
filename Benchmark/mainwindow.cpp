@@ -72,10 +72,12 @@ double MainWindow::abrir(){
                tr("Document files (*.txt);;All files (*.*)") );
 
        QFile file_in(nameFile);
+       QFile file_out("raiz_cuadrada.txt");
 
        QTextStream in(&file_in);
+       QTextStream out(&file_out);
 
-       if(!file_in.open(QIODevice::ReadOnly)){
+       if(!file_in.open(QIODevice::ReadOnly)| !file_out.open(QIODevice::WriteOnly)){
            QMessageBox msgBox;
            msgBox.setText("No se ha podido abrir un fichero. Se va a cerrar el programa.");
            msgBox.exec();
@@ -88,12 +90,15 @@ double MainWindow::abrir(){
        for (int i = 0; i < N; i++) {
            for (int j = 0; j < N; j++) {
                in >> a;
+               out << qSqrt(a)<<" ";
            }
+           out << endl;
        }
 
        t = clock() - t; //fin crono
 
        file_in.close();
+       file_out.close();
 
        return (double)(t)/CLOCKS_PER_SEC;
 
@@ -129,6 +134,9 @@ void MainWindow:: algorithm1(){
     if(bandera==5){
         ui->exec1_6->append(resultString);
     }
+
+
+
 
 
 }
@@ -209,6 +217,5 @@ double MainWindow::cargarImagen(){
 
 
 }
-
 
 

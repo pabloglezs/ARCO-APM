@@ -33,7 +33,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../build-Benchmark-Desktop_Qt_5_8_0_MinGW_32bit-Debug/resources/clock.png</pixmap>
+     <pixmap>../build-Benchmark-Desktop_Qt_5_8_0_MinGW_32bit-Debug/unnamed.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -42,7 +42,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>80</x>
       <y>40</y>
       <width>361</width>
       <height>51</height>
@@ -333,9 +333,9 @@ border-radius:30px;</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>40</y>
+       <y>30</y>
        <width>151</width>
-       <height>21</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -353,9 +353,9 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>90</y>
+       <y>80</y>
        <width>151</width>
-       <height>21</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -373,9 +373,9 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>140</y>
+       <y>130</y>
        <width>151</width>
-       <height>21</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -393,9 +393,9 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>290</y>
+       <y>280</y>
        <width>151</width>
-       <height>21</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -413,9 +413,9 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>240</y>
+       <y>230</y>
        <width>151</width>
-       <height>21</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -433,9 +433,9 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>190</y>
+       <y>180</y>
        <width>151</width>
-       <height>21</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
