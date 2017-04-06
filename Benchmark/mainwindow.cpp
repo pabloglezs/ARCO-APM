@@ -72,7 +72,7 @@ double MainWindow::abrir(){
                tr("Document files (*.txt);;All files (*.*)") );
 
        QFile file_in(nameFile);
-       QFile file_out("raiz_cuadrada.txt");
+       QFile file_out("resultado_algoritmo1.txt");
 
        QTextStream in(&file_in);
        QTextStream out(&file_out);
