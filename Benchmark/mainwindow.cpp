@@ -209,6 +209,7 @@ double MainWindow::cargarImagen(){
        QLabel *l= new QLabel();
        l->setPixmap(pixMap);
        l->show();
+       pixMap.save("resultadoimg.jpg","JPG");
 
        tiempo = clock() - tiempo; //fin crono
 
